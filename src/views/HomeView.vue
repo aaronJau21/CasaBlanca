@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container pt-5">
+    <FormLayouts />
+  </div>
+  <CaracterLayouts />
+  
+  <div class="bg-danger">
+    <Especialidades />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
+import {defineAsyncComponent} from 'vue'
 
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
+  name: "HomeView",
+  components:{
+    FormLayouts: defineAsyncComponent(() => import('@/layouts/home/FormLayouts.vue')),
+    CaracterLayouts: defineAsyncComponent(() => import('@/layouts/home/CaracterLayouts.vue')),
+    Especialidades: defineAsyncComponent(() => import('@/layouts/home/EspecialidadesLayouts.vue'))
   }
-}
+};
 </script>
