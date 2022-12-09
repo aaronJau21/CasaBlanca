@@ -17,7 +17,7 @@
 
         <div class="row row mb-4">
           <div class="col-6">
-            <input type="text" class="form-control" placeholder="Correo" />
+            <input type="text" class="form-control" placeholder="Destino" />
           </div>
           <div class="col-6">
             <input type="text" class="form-control" placeholder="Celular" />

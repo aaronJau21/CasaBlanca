@@ -1,41 +1,55 @@
 <template>
   <footer class="bg-primary">
     <div class="container">
-      <div class="row py-3">
+      <div class="row pt-4">
         <div class="col">
-          <h2>Contacto</h2>
+          <h2 class="text-secondary">Contacto</h2>
 
-          <p>Siguenos</p>
+          <p class="text-secondary">Siguenos</p>
           <ul class="row">
             <li class="col-1">
-              <router-link to="https://www.facebook.com/TransporteCasablanca"
+              <a href="https://www.facebook.com/TransporteCasablanca"
                 ><i class="fa-brands fa-facebook"></i
-              ></router-link>
+              ></a>
             </li>
             <li class="col-1">
-              <router-link :to="insta"
+              <a href="https://www.instagram.com/transportecasablancape/"
                 ><i class="fa-brands fa-instagram"></i
-              ></router-link>
+              ></a>
             </li>
           </ul>
         </div>
-        <div class="col">destinos</div>
-        <div class="col">Servicios</div>
+        <div class="col">
+          <h2 class="text-secondary">Destinos</h2>
+
+          <ul v-for="destino in destinos" :key="destino.id">
+            <li class="text-secondary">{{ destino.lugar }}</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="text-secondary">Servicios</h2>
+          <ul v-for="servicio in servicios" :key="servicio.id">
+            <li class="text-secondary">{{ servicio.servi }}</li>
+          </ul>
+        </div>
       </div>
+    </div>
+    <div class="bg-secondary">
+      <p class="text-center copy m-0 py-3">© 2022 Transporte Casa Blanca</p>
     </div>
   </footer>
 </template>
 
 <script>
+import { destinos, servicios } from "./data";
 export default {
   name: "FooterComponents",
-
-    data(){
-        return{
-            face: '',
-            insta: 'https://www.instagram.com/transportecasablancape/'
-        }
-    }
+  data() {
+    return {
+      destinos,
+      servicios,
+    };
+  },
 };
 </script>
 
@@ -49,5 +63,9 @@ ul {
       color: #fff;
     }
   }
+}
+
+.copy{
+  font-size: 20px;
 }
 </style>

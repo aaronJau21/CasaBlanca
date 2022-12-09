@@ -32,7 +32,7 @@
           </li>
           <li class="nav-item">
             <router-link class="nav-link text-dark" to="/flota"
-              >Flota</router-link
+              >Servicio</router-link
             >
           </li>
           <li>
