@@ -1,13 +1,17 @@
 <template>
-  <h1>Destinos</h1>
+  <DestinosLayout />
 </template>
 
 <script>
+import { defineAsyncComponent } from "vue";
 export default {
-
-}
+  components: {
+    DestinosLayout: defineAsyncComponent(() =>
+      import('@/layouts/destinos/DestinosLayout.vue')
+    ),
+  },
+};
 </script>
 
 <style>
-
 </style>

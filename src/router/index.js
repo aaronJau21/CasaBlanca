@@ -16,9 +16,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/NosotrosView.vue')
   },
   {
-    path:'/flota',
-    name:'flota',
-    component: () => import('@/views/FlotaView.vue')
+    path:'/servicio',
+    name:'servicio',
+    component: () => import('@/views/ServicioView.vue')
   },
   {
     path: '/destinos',

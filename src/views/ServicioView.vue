@@ -1,12 +1,14 @@
 <template>
-  <FormLayouts />
+  <ListaLayout />
 </template>
 
 <script>
+
 import {defineAsyncComponent} from 'vue'
+
 export default {
   components:{
-    FormLayouts: defineAsyncComponent(() => import('@/layouts/Contacto/FormLayouts.vue'))
+    ListaLayout: defineAsyncComponent(()=> import('@/layouts/servicios/ListaLayout.vue'))
   }
 }
 </script>

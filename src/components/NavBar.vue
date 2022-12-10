@@ -31,7 +31,7 @@
             >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-dark" to="/flota"
+            <router-link class="nav-link text-dark" to="/servicio"
               >Servicio</router-link
             >
           </li>

@@ -2,6 +2,7 @@
   <NavBar />
   <router-view />
   <FooterComponent />
+  <FabComponent />
 </template>
 
 <script>
@@ -13,6 +14,7 @@ export default {
     FooterComponent: defineAsyncComponent(() =>
       import("@/components/Footer.vue")
     ),
+    FabComponent: defineAsyncComponent(() => import('@/components/Fab.vue'))
   },
 };
 </script>
